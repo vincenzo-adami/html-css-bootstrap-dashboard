@@ -59,13 +59,14 @@
 
     <main>
       <section class="container p-4">
-        <div class="row">
+        <div class="row gx-5">
           <div class="col-12 col-xl-9">
             <div class="row row-gap-4">
-              <div class="container d-flex justify-content-between">
+              <div class="container d-flex justify-content-between p-0">
                 <span class="fs-3">Catalogo Libri</span>
                 <button class="btn btn-primary text-nowrap">Aggiungi Libro</button>
               </div>
+              <!-- table responsive - hide 2 col on mobile -->
               <table class="table table-striped pt-2">
                 <thead>
                   <tr>
@@ -285,24 +286,113 @@
             </div>
           </div>
 
-          <div class="col-12 col-xl-3">
-            <div class="card d-flex flex-wrap">
-              <!-- <img src="..." class="card-img-top" alt="..."> -->
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+          <div class="col col-xl-3">
+            <!-- sidecontent - wrap on mobile -->
+            <div class="card d-flex flex-wrap mb-4">
+              <div class="card-header">
+                <h5 class="card-title">Aiuto</h5>
               </div>
+              <div class="card-body">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                  data-bs-whatever="@mdo">
+                  Apri un Ticket
+                </button>
+
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h3 class="modal-title fs-5" id="exampleModalLabel">
+                          Nuovo Ticket
+                        </h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <form>
+                          <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">
+                              Oggetto:
+                            </label>
+                            <input type="text" class="form-control" id="recipient-name">
+                          </div>
+                          <div class="mb-3">
+                            <label for="message-text" class="col-form-label">Messaggio:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+                        <button type="button" class="btn btn-primary">Invia messaggio</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="card d-flex flex-wrap">
+
               <div class="card">
-                <!-- <img src="..." class="card-img-top" alt="..."> -->
+                <div class="card-header">
+                  <h5 class="card-title">F.A.Q.</h5>
+                </div>
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.
-                  </p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                          Accordion Item #1
+                        </button>
+                      </h2>
+                      <div id="flush-collapseOne" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                          demonstrate the
+                          <code>.accordion-flush</code> class. This is the first item's accordion body.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                          Accordion Item #2
+                        </button>
+                      </h2>
+                      <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                          demonstrate the
+                          <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine
+                          this being filled
+                          with some actual content.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#flush-collapseThree" aria-expanded="false"
+                          aria-controls="flush-collapseThree">
+                          Accordion Item #3
+                        </button>
+                      </h2>
+                      <div id="flush-collapseThree" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                          demonstrate the
+                          <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more
+                          exciting happening
+                          here in terms of content, but just filling up the space to make it look, at least at first
+                          glance, a bit more
+                          representative of how this would look in a real-world application.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
