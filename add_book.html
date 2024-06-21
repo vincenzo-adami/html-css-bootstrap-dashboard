@@ -46,35 +46,34 @@
                 </a>
               </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Cerca..." aria-label="Search">
-              <button class="btn btn-outline-light" type="submit">Cerca</button>
-            </form>
           </div>
         </div>
       </nav>
     </header>
 
     <section>
-      <div class="container">
+      <div class="container p-3">
         <h1>Nuovo Libro</h1>
         <form action="" method="POST" class="row g-3">
           <div class="col col-xl-6">
-            <label for="author-name" class="form-label">Nome Autore</label>
-            <input type="text" class="form-control" id="author-name" placeholder="Inserisci il nome dell'autore">
+            <label for="author-name" class="form-label fs-5">Nome Autore</label>
+            <input type="text" class="form-control" id="author-name" name="author-name"
+              placeholder="Inserisci il nome dell'autore" required>
           </div>
           <div class="col col-xl-6">
-            <label for="author-surname" class="form-label">Cognome Autore</label>
-            <input type="text" class="form-control" id="author-surname" placeholder="Inserisci il cognome dell'autore">
+            <label for="author-surname" class="form-label fs-5">Cognome Autore</label>
+            <input type="text" class="form-control" id="author-surname" name="author-surname"
+              placeholder="Inserisci il cognome dell'autore" required>
           </div>
           <div class="col-12">
-            <label for="title" class="form-label">Titole</label>
-            <input type="text" class="form-control" id="title" placeholder="Inserisci il titole del libro">
-            <span>Titole versione italiana</span>
+            <label for="title" class="form-label fs-5">Titolo</label>
+            <input type="text" class="form-control" id="title" name="title" placeholder="Inserisci il titole del libro"
+              required>
+            <span class="text-secondary fs-6">Titole versione italiana</span>
           </div>
           <div class="col-12 col-xl-4">
-            <label for="genre" class="form-label">Genere</label>
-            <select class="form-select" id="genre" name="genre" aria-label="Default select example">
+            <label for="genre" class="form-label fs-5">Genere</label>
+            <select class="form-select" id="genre" name="genre" aria-label="Default select example" required>
               <option selected>Scegli il genere</option>
               <option value="thriller">Thriller</option>
               <option value="fantasy">Fantasy</option>
@@ -84,20 +83,23 @@
             </select>
           </div>
           <div class="col-12 col-xl-4">
-            <label for="year" class="form-label">Anno di pubblicazione</label>
-            <input type="text" class="form-control" id="year" min="0" max="2024" placeholder="Inserisci l'anno">
+            <label for="year" class="form-label fs-5">Anno di pubblicazione</label>
+            <input type="text" class="form-control" id="year" min="0" max="2024" placeholder="Inserisci l'anno"
+              required>
           </div>
           <div class="col-12 col-xl-4">
-            <label for="isbn" class="form-label">ISBN#</label>
-            <input type="text" class="form-control" id="isbn" placeholder="Inserisci il codice ISBN#">
+            <label for="isbn" class="form-label fs-5">ISBN#</label>
+            <input type="text" class="form-control" id="isbn" placeholder="Inserisci il codice ISBN#" minlength="17"
+              maxlength="17" required>
           </div>
-          <div class="border-bottom border-secondary border-1 opacity-50"></div>
-          <div class="col-12">
-            <label for="note" class="form-label">Note</label>
-            <textarea name="note" id="note" class="form-control" rows="3">Inserisci eventuali note sul libro</textarea>
+          <div class="border-bottom border-secondary border-1 opacity-50 py-3"></div>
+          <div class="col-12 pt-2">
+            <label for="note" class="form-label fs-5">Note</label>
+            <textarea name="note" id="note" class="form-control" rows="3"
+              placeholder="Inserisci eventuali note sul libro"></textarea>
           </div>
           <div class="col-12">
-            <input class="form-check-input" type="checkbox" value="digital" id="digital">
+            <input class="form-check-input" type="checkbox" value="digital" id="digital" name="digital">
             <label class="form-check-label" for="digital">
               Disponibile anche in digitale
             </label>
